@@ -14,7 +14,7 @@ function App() {
 
     <footer className="bg-white border-top py-3 mt-auto text-center">
   <div className="container">
-    {/* الشارة الأولى: إشارة إلى أنه مشروعك الأول */}
+
     <div className="mb-2">
       <span 
         className="badge px-3 py-2 rounded-pill fw-normal" 
@@ -24,7 +24,7 @@ function App() {
       </span>
     </div>
 
-    {/* التوقيع باسمك واسم عائلتك */}
+
     <p className="mb-0 text-muted fs-7">
       © {new Date().getFullYear()} <strong>FocusFlow</strong> — Built with ❤️ by{" "}
       <span className="fw-bold text-dark">Nadeen M. Alfayomi</span>

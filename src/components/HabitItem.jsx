@@ -48,7 +48,7 @@ export const HabitItem = ({ habit, onToggle, onUpdateTitle, onUpdateNote, onRemo
           onChange={() => onToggle(habit.id)}
           label={
             <div className="ms-2">
-              {/* خط العادة عريض (Bolder) */}
+         
               <span 
                 className={habit.isCompleted ? "text-completed fw-bold" : "fw-bold"}
                 style={{ fontSize: "1.05rem" }}
@@ -56,7 +56,6 @@ export const HabitItem = ({ habit, onToggle, onUpdateTitle, onUpdateNote, onRemo
                 {habit.title}
               </span>
 
-              {/* خط الملاحظة صغير وفاهي (Small & Muted) */}
               {habit.note && !isEditingNote && (
                 <div 
                   className="mt-1" 

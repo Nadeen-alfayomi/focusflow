@@ -1,2 +1,2 @@
 export { default as CustomSidebar } from './Sidebar';
-export { default as CustomNavbar } from './Navbar';
+export { default as CustomNavbar } from './CustomNavbar';
