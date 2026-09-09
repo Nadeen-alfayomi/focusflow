@@ -1,0 +1,84 @@
+   <ListGroup variant="flush">
+            {/* تمر الدالة على كل عادة متبقية في القائمة المفلترة وترسم لها عنصر */}
+            {filteredHabits.map((habit) => (
+              <ListGroup.Item 
+                key={habit.id} 
+                className="d-flex align-items-center justify-content-between px-3 py-3"
+              > 
+            {/* كيف يقرر الكود أي الوجهين يظهر */}
+            {/* editIndex:
+             متغير يخزن رقم 
+            (id)
+             العادة التي نقوم بتعديلها حالياً. */}
+
+             {/* habit.id: 
+             رقم العادة الحالية
+              التي يرسمها الكود في القائمة. */}
+                {editIndex === habit.id ? 
+                
+                //اذا نعم
+                // يُعرض وضع التعديل 
+                (
+                  <div className="d-flex gap-2 w-100">
+                    <Form.Control
+                      size="sm"
+                      type="text"
+                      value={editText}
+                      // 
+                      onChange={(e) => setEditText(e.target.value)}
+                      // عند الضغط على زر Enter يحفظ التعديل مباشرة
+                      onKeyDown={(e) => e.key === "Enter" && handleSaveEdit(habit.id)}
+                      className="custom-input"
+                      //أول ما يفتح مربع التعديل، يضع
+                      //  المؤشر دافخله تلقائياً لتبدأ الكتابة فوراً.
+                      autoFocus
+                    />
+                    <Button size="sm" className="btn-maroon" onClick={() => handleSaveEdit(habit.id)}>
+                      Save
+                    </Button>
+                    <Button size="sm" variant="outline-secondary" className="rounded-pill" onClick={() => setEditIndex(null)}>
+                      Cancel
+                    </Button>
+                  </div>
+                ) : (
+                  <>
+                    <Form.Check
+                      type="checkbox"
+                      id={`habit-${habit.id}`}
+                      label={
+                        <span className=
+                        // يحدد ما إذا كان المربع مفعلًا أم لا
+                        {`ms-2 ${habit.isCompleted ? "text-completed" : ""}`} style={{ color: "#332226" }}>
+                          {habit.title}
+                        </span>
+                      }
+                      checked={habit.isCompleted}
+                      // يغير حالة الإكمال عند النقر
+                      onChange={() => handleToggle(habit.id)}
+                    />
+
+                    <div className="d-flex gap-1">
+                      <Button 
+                        size="sm" 
+                        variant="light"
+                        className="rounded-circle text-muted"
+                        // لتحويل هذا الكارت لوضع التعديل
+                        onClick={() => handleStartEdit(habit)}
+                      >
+                        ✏️
+                      </Button>
+                      <Button 
+                        size="sm" 
+                        variant="light"
+                        className="rounded-circle text-danger"
+                        // لحذف العادة فوراً
+                        onClick={() => handleRemove(habit.id)}
+                      >
+                        🗑️
+                      </Button>
+                    </div>
+                  </>
+                )}
+              </ListGroup.Item>
+            ))}
+          </ListGroup>

@@ -1,0 +1,162 @@
+/* src/global.css - Burgundy & Soft Pink Theme */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* Global Page Background & Font */
+body {
+  background: linear-gradient(135deg, #fce8eb 0%, #f7d6dc 50%, #f0c2cb 100%) !important;
+  font-family: 'Poppins', sans-serif !important;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  color: #332226;
+}
+
+/* Main Cards */
+.custom-card, .card {
+  border-radius: 20px !important;
+  border: 1px solid #f2b5be !important;
+  background-color: #ffffff !important;
+  box-shadow: 0 12px 35px rgba(122, 12, 46, 0.12) !important;
+}
+
+/* Titles */
+.app-title, .page-title {
+  color: #7a0c2e !important; /* Deep Maroon */
+  font-weight: 700 !important;
+  letter-spacing: -0.5px;
+}
+
+/* Form Inputs */
+.form-control, .custom-input {
+  border-radius: 12px !important;
+  border: 1.5px solid #f2b5be !important;
+  padding: 10px 16px !important;
+  background-color: #fcf0f2 !important;
+  color: #4a0d1e !important;
+  font-size: 0.95rem;
+}
+
+.form-control:focus, .custom-input:focus {
+  border-color: #a31d45 !important;
+  box-shadow: 0 0 0 0.25rem rgba(163, 29, 69, 0.18) !important;
+  background-color: #ffffff !important;
+}
+
+/* Primary Action Buttons (Maroon) */
+.btn-primary, .btn-maroon {
+  background-color: #7a0c2e !important;
+  border-color: #7a0c2e !important;
+  color: #ffffff !important;
+  border-radius: 50px !important;
+  font-weight: 600 !important;
+  box-shadow: 0 4px 12px rgba(122, 12, 46, 0.25) !important;
+  transition: all 0.2s ease-in-out !important;
+}
+
+.btn-primary:hover, .btn-maroon:hover {
+  background-color: #5c061c !important;
+  border-color: #5c061c !important;
+  transform: translateY(-1px);
+}
+
+/* Secondary Filter Buttons (Soft Pink Outline & Maroon Active) */
+.btn-outline-primary, .btn-pink-outline {
+  color: #7a0c2e !important;
+  border: 1.5px solid #f2b5be !important;
+  border-radius: 50px !important;
+  background-color: #fcf0f2 !important;
+  font-weight: 500 !important;
+}
+
+.btn-outline-primary:hover, .btn-outline-primary.active,
+.btn-pink-outline:hover, .btn-pink-outline.active {
+  background-color: #a31d45 !important;
+  border-color: #a31d45 !important;
+  color: #ffffff !important;
+}
+
+/* Progress Bar */
+.progress {
+  height: 12px !important;
+  border-radius: 10px !important;
+  background-color: #fce8eb !important;
+}
+
+.progress-bar {
+  background: linear-gradient(90deg, #e5989b 0%, #a31d45 50%, #7a0c2e 100%) !important;
+}
+
+/* List Items */
+.list-group-item {
+  border-radius: 14px !important;
+  border: 1px solid #fce8eb !important;
+  margin-bottom: 8px !important;
+  background-color: #ffffff !important;
+  transition: background-color 0.2s ease;
+}
+
+.list-group-item:hover {
+  background-color: #fff9fa !important;
+}
+
+/* Checkbox Style */
+.form-check-input {
+  width: 1.25rem !important;
+  height: 1.25rem !important;
+  border-radius: 6px !important;
+  border: 2px solid #a31d45 !important;
+  cursor: pointer;
+}
+
+.form-check-input:checked {
+  background-color: #7a0c2e !important;
+  border-color: #7a0c2e !important;
+}
+
+/* Completed Items Text Style */
+.text-completed {
+  text-decoration: line-through !important;
+  color: #a88b92 !important;
+}
+
+/* Navbar Styling */
+.custom-navbar {
+  background-color: #ffffff !important;
+  border-bottom: 1px solid #f2b5be !important;
+  box-shadow: 0 4px 15px rgba(122, 12, 46, 0.05);
+  padding: 12px 24px;
+}
+
+.navbar-brand-title {
+  color: #7a0c2e !important;
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+/* Sidebar Styling */
+.custom-sidebar {
+  width: 250px;
+  min-height: 100vh;
+  background-color: #ffffff;
+  border-right: 1px solid #f2b5be;
+  padding: 24px 16px;
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  color: #5c061c;
+  text-decoration: none;
+  border-radius: 12px;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+  margin-bottom: 6px;
+}
+
+.sidebar-link:hover, .sidebar-link.active {
+  background-color: #fce8eb;
+  color: #7a0c2e;
+  font-weight: 600;
+}
