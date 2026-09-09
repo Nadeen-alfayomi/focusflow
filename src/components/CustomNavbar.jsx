@@ -18,7 +18,7 @@ export const CustomNavbar = () => {
           
      
           <a 
-            href="https://github.com/nadeen.alfayomi" 
+            href="https://github.com/nadeen-alfayomi" 
             target="_blank" 
             rel="noopener noreferrer"
             className="btn btn-outline-dark btn-sm rounded-pill px-3 d-flex align-items-center gap-1"
